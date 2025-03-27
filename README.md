@@ -10,3 +10,18 @@
 ```bash
 uv run -- flask --app executor run -p 3000
 ```
+
+## Build & Push Docker image
+
+```bash
+export VERSION=<version>
+docker build -t guizmaii/python_executor:${VERSION} .
+docker push guizmaii/python_executor:${VERSION}
+```
+
+## Run Docker image
+
+```bash
+export VERSION=<version>
+docker run -p 3000:3000 guizmaii/python_executor:<version>
+```
