@@ -28,4 +28,4 @@ docker run -p 3000:3000 guizmaii/python_executor:<version>
 
 ## Published Docker images
 
-Docker images are published here: https://github.com/guizmaii/python_executor/
+Docker images are published here: https://hub.docker.com/r/guizmaii/python_executor
