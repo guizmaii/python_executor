@@ -16,9 +16,9 @@ def execute():
     program = json["program"]
     try:
         result = eval(program)
-        return {"result": result, "error": None}
+        return {"result": result}
     except Exception as e:
-        return {"result": None, "error": str(e)}
+        return {"error": str(e)}
 
 
 @app.route("/validate", methods=['POST'])
