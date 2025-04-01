@@ -15,7 +15,7 @@ uv run -- flask --app executor run -p 3000
 
 ```bash
 export VERSION=<version>
-docker build -t guizmaii/python_executor:${VERSION} .
+docker build --platform linux/amd64,linux/arm64 -t guizmaii/python_executor:${VERSION} .
 docker push guizmaii/python_executor:${VERSION}
 ```
 
