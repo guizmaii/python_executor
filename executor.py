@@ -16,9 +16,9 @@ def execute():
     program = json["program"]
     try:
         result = eval(program)
-        return {"result": result}
+        return {"result": result, "error": None}
     except Exception as e:
-        return {"error": str(e)}
+        return {"result": None, "error": str(e)}
 
 
 @app.route("/validate", methods=['POST'])
@@ -27,6 +27,6 @@ def validate():
     program = json["program"]
     try:
         ast.parse(program)
-        return {"valid": True}
+        return {"valid": True, "error": None}
     except SyntaxError as e:
         return {"valid": False, "error": str(e)}
