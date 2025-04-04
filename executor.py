@@ -27,6 +27,6 @@ def validate():
     program = json["program"]
     try:
         ast.parse(program)
-        return {"valid": True, "error": None}
+        return {}
     except SyntaxError as e:
-        return {"valid": False, "error": str(e)}
+        return {"error": str(e)}
